@@ -37,12 +37,13 @@ async function getRecipe() {
 }
 
 router.get("/", async (req, res) => {
-    console.log("userRecipes");
+    res.render("wip");
+    // console.log("userRecipes");
 
-    var data = await getRecipe();
-    var num_cards = data.length;
+    // var data = await getRecipe();
+    // var num_cards = data.length;
 
-    res.render("wip", { name: 'Guest', num_cards: num_cards, data: data });
+    // res.render("wip", { name: 'Guest', num_cards: num_cards, data: data });
 
     console.log(path.join(__dirname, '..', 'public'));
 });
