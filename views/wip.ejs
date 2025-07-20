@@ -5,39 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Google Login-->
-    <meta name="google-signin-client_id" content="630460929969-cbao2270i6fnvdvp7f5pm19s4pgecmhh.apps.googleusercontent.com">
-    <script src="https://accounts.google.com/gsi/client" async></script>
-    <script>
-        function decodeJWT(token) {
-
-            let base64Url = token.split(".")[1];
-            let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-            let jsonPayload = decodeURIComponent(
-                atob(base64)
-                    .split("")
-                    .map(function (c) {
-                        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-                    })
-                    .join("")
-            );
-            return JSON.parse(jsonPayload);
-        }
-
-        function handleCredentialResponse(response) {
-
-            console.log("Encoded JWT ID token: " + response.credential);
-
-            const responsePayload = decodeJWT(response.credential);
-
-            console.log("Decoded JWT ID token fields:");
-            console.log("  Full Name: " + responsePayload.name);
-            console.log("  Given Name: " + responsePayload.given_name);
-            console.log("  Family Name: " + responsePayload.family_name);
-            console.log("  Unique ID: " + responsePayload.sub);
-            console.log("  Profile image URL: " + responsePayload.picture);
-            console.log("  Email: " + responsePayload.email);
-        }
-    </script>
+    <%- include('partials/googleLoginHead'); -%>
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,28 +17,11 @@
     <title>WIP</title>
 </head>
 <body>
-    <header class="topnav_background" id="navbar">
-        <div class="topnav">
-            <a href="/home" style="border-width: 0px; padding: 0px;" ;><img src="images/UMAI-ICON-FINAL-02.svg" class="topnav_img"></a>
-            <div class="topnav_links">
-                <a>Add Recipe</a>
-                <a href="/discover">Discover</a>
-                <a href="/userRecipes">Your Recipes</a>
-            </div>
-        </div>
-    </header>
+    <%- include('partials/navbar'); -%>
     <div id="container">
         <h1>Sorry!</h1>
         <h2>This place is still under construction!</h2>
         <a href="/home">Click me for a redirect</a>
-    </div>
-    <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
-        data-client_id="630460929969-cbao2270i6fnvdvp7f5pm19s4pgecmhh.apps.googleusercontent.com"></div>
-    <!-- g_id_signin places the button on a page and supports customization -->
-    <div class="g_id_signin"></div>
-
-    <div>
-        <%- include('partials/taco'); -%>
     </div>
 </body>
 </html>
