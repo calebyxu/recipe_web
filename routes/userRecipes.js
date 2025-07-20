@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
     var data = await getRecipe();
     var num_cards = data.length;
 
-    res.render("userRecipes", { name: 'Guest', num_cards: num_cards, data: data });
+    res.render("wip", { name: 'Guest', num_cards: num_cards, data: data });
 
     console.log(path.join(__dirname, '..', 'public'));
 });

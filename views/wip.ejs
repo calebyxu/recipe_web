@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!--Google Login-->
-    <meta name="google-signin-client_id"
-        content="630460929969-cbao2270i6fnvdvp7f5pm19s4pgecmhh.apps.googleusercontent.com">
-
+    <meta name="google-signin-client_id" content="630460929969-cbao2270i6fnvdvp7f5pm19s4pgecmhh.apps.googleusercontent.com">
     <script src="https://accounts.google.com/gsi/client" async></script>
-
     <script>
         function decodeJWT(token) {
 
@@ -42,20 +38,16 @@
             console.log("  Email: " + responsePayload.email);
         }
     </script>
-
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap" rel="stylesheet">
-
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/wip.css">
-
     <title>WIP</title>
 </head>
-
 <body>
     <header class="topnav_background" id="navbar">
         <div class="topnav">
@@ -67,16 +59,18 @@
             </div>
         </div>
     </header>
-
     <div id="container">
         <h1>Sorry!</h1>
         <h2>This place is still under construction!</h2>
         <a href="/home">Click me for a redirect</a>
     </div>
-
     <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
         data-client_id="630460929969-cbao2270i6fnvdvp7f5pm19s4pgecmhh.apps.googleusercontent.com"></div>
     <!-- g_id_signin places the button on a page and supports customization -->
     <div class="g_id_signin"></div>
 
+    <div>
+        <%- include('partials/taco') %>
+    </div>
+</body>
 </html>
