@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google Login-->
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +20,12 @@
 
     <title>WIP</title>
 </head>
+
 <body>
     <header class="topnav_background" id="navbar">
         <div class="topnav">
-            <a href="/index" style="border-width: 0px; padding: 0px;";><img src="images/UMAI-ICON-FINAL-02.svg" class="topnav_img"></a>
+            <a href="/index" style="border-width: 0px; padding: 0px;" ;><img src="images/UMAI-ICON-FINAL-02.svg"
+                    class="topnav_img"></a>
             <div class="topnav_links">
                 <a>Add Recipe</a>
                 <a href="/discover">Discover</a>
@@ -27,11 +33,33 @@
             </div>
         </div>
     </header>
-    
+
     <div id="container">
         <h1>Sorry!</h1>
         <h2>This place is still under construction!</h2>
         <a href="/home">Click me for a redirect</a>
     </div>
+
+    <div id="my-signin2"></div>
+    <script>
+        function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+            console.log(error);
+        }
+        function renderButton() {
+            gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+    </script>
 </body>
+
 </html>
