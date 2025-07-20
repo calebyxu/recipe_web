@@ -71,6 +71,16 @@ body {
     z-index: 1000;
 }
 
+#googleLogin {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.g_id_signin {
+    align-self: center;
+}
+
 /* Footer */
 footer{
     display: flex;
