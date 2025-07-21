@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
     res.render("userLanding");
-    console.log(typeof req.body);
+    console.log(req.body.name);
     console.log("hello")
 });
 
