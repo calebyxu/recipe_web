@@ -38,8 +38,7 @@ async function getRecipe() {
 
 router.get("/", async (req, res) => {
     res.render("wip");
-    console.log(typeof req.body);
-    console.log('hello');
+    
     // console.log("userRecipes");
 
     // var data = await getRecipe();
@@ -52,6 +51,8 @@ router.get("/", async (req, res) => {
 
 router.post("/", (req, res) => {
     res.render("userRecipes");
+    console.log(typeof req.body);
+    console.log('hello');
 });
 
 router.put("/", (req, res) => {
