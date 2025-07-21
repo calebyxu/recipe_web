@@ -39,6 +39,7 @@ async function getRecipe() {
 router.get("/", async (req, res) => {
     res.render("wip");
     console.log(typeof req.body);
+    console.log('hello');
     // console.log("userRecipes");
 
     // var data = await getRecipe();
