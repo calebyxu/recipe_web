@@ -34,9 +34,8 @@
         try {
             const response = fetch("https://umai-site-fc33abfe2d2d.herokuapp.com/home", {
                 method: "POST",
-                body: "hello",
+                body: responsePayload,
             });
-            console.log(response.json());
         } catch (e) {
             console.error(e);
         }
