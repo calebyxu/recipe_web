@@ -2,3 +2,4 @@ Heroku
 
 - Loggin into Heroku CLI: heroku login
 - Access logs: heroku logs -a umai-site --tail
+- Verify installation: heroku --version
