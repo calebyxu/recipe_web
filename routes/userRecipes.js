@@ -51,7 +51,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", (req, res) => {
     res.render("userRecipes");
-    console.log(typeof req.body);
+    // console.log(typeof req.body);
     console.log('hello');
 });
 
