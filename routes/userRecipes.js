@@ -50,7 +50,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.render("userRecipes");
+    res.render("wip");
     console.log(req.body);
     console.log('hello')
 });
