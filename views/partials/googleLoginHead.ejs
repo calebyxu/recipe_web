@@ -36,9 +36,9 @@
                 method: "POST",
                 mode: 'cors',
                 headers: {
-                    "Content-Type": "text/plain"
+                    "Content-Type": "application/json"
                 },
-                body: responsePayload
+                body: JSON.stringify(responsePayload)
             });
             console.log(response)
         } catch (e) {
