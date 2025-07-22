@@ -52,6 +52,7 @@ router.get("/", async (req, res) => {
 router.post("/", (req, res) => {
     res.render("userRecipes");
     console.log(req.body);
+    console.log('hello')
 });
 
 router.put("/", (req, res) => {
