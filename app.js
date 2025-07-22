@@ -19,6 +19,7 @@ app.listen(PORT, (error) =>{
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.text());
 
 //Routes
 const userRoute = require('./routes/userLanding');

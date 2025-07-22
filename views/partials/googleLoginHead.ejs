@@ -35,6 +35,9 @@
             const response = await fetch("https://umai-site-fc33abfe2d2d.herokuapp.com/home", {
                 method: "POST",
                 mode: 'cors',
+                headers: {
+                    "Content-Type": "text/plain"
+                },
                 body: "hello"
             });
             console.log(response)
