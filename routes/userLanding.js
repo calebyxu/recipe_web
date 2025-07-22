@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
     res.render("userLanding");
     console.log(req.body);
-    console.log("hello");
+    res.send(req.body);
 });
 
 router.put("/", (req, res) => {
