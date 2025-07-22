@@ -51,7 +51,8 @@ router.get("/", async (req, res) => {
 
 router.post("/", (req, res) => {
     res.render("wip");
-    console.log(JSON.parse(req.body));
+    const value = req.body['input'];
+    console.log(value)
     console.log('hello')
 });
 
