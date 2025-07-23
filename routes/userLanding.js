@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.render("discover");
+    res.render("wip");
 });
 
 router.put("/", (req, res) => {
