@@ -8,7 +8,7 @@ router.use(express.static(path.join(__dirname, '..', 'public')));
 
 router.get("/", (req, res) => {
     console.log("userlanding");
-    res.render("userLanding", { name: "hello" });
+    res.render("userLanding", { name: "" });
     console.log(path.join(__dirname, '..', 'public'));
 });
 
