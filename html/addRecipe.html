@@ -31,7 +31,7 @@
     <div id="addRecipe_container">
         <h1 id="title">Add A Recipe</h1>
 
-        <form>
+        <form action="https://umai-site-fc33abfe2d2d.herokuapp.com/home/" method="get">
             <div class="long">
                 <label>Title</label>
                 <input type="text" placeholder="Enter a Title...">
@@ -67,6 +67,7 @@
                 <input type="text" placeholder="Write Your Instructions">
                 <button type="button" onClick="addTextBox(instructions)">+ Add</button>
             </div>
+            <input type="submit" value="submit">
         </form>
     </div>
     <script src="../public/js/addTextBox.js"></script>
