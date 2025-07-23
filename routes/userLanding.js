@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.render("wip");
+    res.redirect("userlanding");
 });
 
 router.put("/", (req, res) => {
