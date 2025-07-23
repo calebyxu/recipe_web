@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.render("home", { name: "hello"}, (err, html) => {
+    res.render("userlanding", { name: "hello"}, (err, html) => {
         if (err) {
             console.error(err);
         } else {
