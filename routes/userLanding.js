@@ -7,13 +7,13 @@ const router = express.Router();
 router.use(express.static(path.join(__dirname, '..', 'public')));
 
 router.get("/", (req, res) => {
-    console.log("userlanding");
+    console.log("userLanding");
     res.render("userLanding", { name: "" });
     console.log(path.join(__dirname, '..', 'public'));
 });
 
 router.post("/", (req, res) => {
-    res.render("userlanding", { name: "hello"}, (err, html) => {
+    res.render("userLanding", { name: "hello"}, (err, html) => {
         if (err) {
             console.error(err);
         } else {
