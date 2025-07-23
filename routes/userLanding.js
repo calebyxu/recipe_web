@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.render("userLanding", { name: 'hello'});
+    res.render("discover");
 });
 
 router.put("/", (req, res) => {
