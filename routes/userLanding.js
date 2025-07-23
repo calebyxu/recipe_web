@@ -8,12 +8,12 @@ router.use(express.static(path.join(__dirname, '..', 'public')));
 
 router.get("/", (req, res) => {
     console.log("userlanding");
-    res.render("userLanding");
+    res.render("userLanding", { name: "" });
     console.log(path.join(__dirname, '..', 'public'));
 });
 
 router.post("/", (req, res) => {
-    res.render("userLanding", {name: req.body['name']});
+    res.render("userLanding", { name: req.body['name']});
 });
 
 router.put("/", (req, res) => {
