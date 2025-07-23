@@ -13,8 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.render("userLanding");
-    console.log(req.body['name']);
+    res.render("userLanding", {name: req.body['name']});
 });
 
 router.put("/", (req, res) => {
