@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.redirect("userlanding");
+    res.redirect("home", { name: "hello"});
 });
 
 router.put("/", (req, res) => {
