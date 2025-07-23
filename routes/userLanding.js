@@ -13,7 +13,13 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.redirect(200, "home", { name: "hello"});
+    res.render("home", { name: "hello"}, (err, html) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log(html);
+        }
+    });
 });
 
 router.put("/", (req, res) => {
