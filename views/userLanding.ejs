@@ -1,99 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <%- include('partials/googleLoginHead'); -%>
-    <title>userLanding</title>
+        <title>userLanding</title>
 
-    <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap" rel="stylesheet">
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap" rel="stylesheet">
 
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/userLanding.css">
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/userLanding.css">
 
-    <!--Owl Carousel-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--Owl Carousel-->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+            integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <%- include('partials/navbar'); -%>
 
-    <form action='https://umai-site-fc33abfe2d2d.herokuapp.com/home' method="post">
-        <input value="hello">
-        <input value="submit">
-    </form>
+        <div id="content_wrapper">
+            <div id="hero">
+                <div id="hero_container">
+                    <div id="hero_text_wrapper">
+                        <h1 id="hero_text">Welcome</h1>
+                        <% if (name !='' ){ %>
+                            <h1>
+                                <%= name %>
+                            </h1>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
 
-    <div id="content_wrapper">
-        <div id="hero">
-            <div id="hero_container">
-                <div id="hero_text_wrapper">
-                    <h1 id="hero_text">Welcome</h1>
-                    <% if (name != ''){ %>
-                        <h1><%= name %></h1>
-                    <% } %>
+            <form action='https://umai-site-fc33abfe2d2d.herokuapp.com/home' method="post">
+                <input value="hello">
+                <input value="submit">
+            </form>
+
+            <div class="separator">
+                <h1>Find Something New</h1>
+                <a href="/discover">Discover Now</a>
+            </div>
+            <div class="carousel_wrapper">
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img class="carousel_img" src="images/charsui.jpg"></div>
+                    <div class="item"><img class="carousel_img" src="images/gyudon.jpg"></div>
+                    <div class="item"><img class="carousel_img" src="images/japanese_chicken_curry.jpg"></div>
+                    <div class="item"><img class="carousel_img" src="images/oyakodon.jpg"></div>
+                    <div class="item"><img class="carousel_img" src="images/fried_rice.jpg"></div>
+                    <div class="item"><img class="carousel_img" src="images/tea_eggs.jpg"></div>
+                    <div class="item"><img class="carousel_img" src="images/katsudon.jpg"></div>
+                    <div class="item"><img class="carousel_img" src="images/mapo_tofu.jpg"></div>
+                </div>
+            </div>
+
+            <div class="grid_container">
+                <div class="grid_text">
+                    <h1>Your Recipes</h1>
+                    <p>
+                        Sometimes the best food is something that you have already made.
+                        Rejoin your world of culinary inspiration with your treasure trove of tantalizing recipes.
+                        Dive into a mouthwatering journey that promises to satisfy every craving and ignite your passion
+                        for cooking.
+                        Click below to see what you have cooking!
+                    </p>
+                    <a class="link" href="/userRecipes">Cooking Time!</a>
+                </div>
+
+                <div class="grid_display">
+                    <img class="grid_img" src="images/katsudon.jpg">
                 </div>
             </div>
         </div>
-    
-        <div class="separator">
-            <h1>Find Something New</h1>
-            <a href="/discover">Discover Now</a>
-        </div>
-        <div class="carousel_wrapper">
-            <div class="owl-carousel owl-theme">
-                <div class="item"><img class="carousel_img" src="images/charsui.jpg"></div>
-                <div class="item"><img class="carousel_img" src="images/gyudon.jpg"></div>
-                <div class="item"><img class="carousel_img" src="images/japanese_chicken_curry.jpg"></div>
-                <div class="item"><img class="carousel_img" src="images/oyakodon.jpg"></div>
-                <div class="item"><img class="carousel_img" src="images/fried_rice.jpg"></div>
-                <div class="item"><img class="carousel_img" src="images/tea_eggs.jpg"></div>
-                <div class="item"><img class="carousel_img" src="images/katsudon.jpg"></div>
-                <div class="item"><img class="carousel_img" src="images/mapo_tofu.jpg"></div>
-            </div>
-        </div>
-    
-        <div class="grid_container">
-            <div class="grid_text">
-                <h1>Your Recipes</h1>
-                <p>
-                    Sometimes the best food is something that you have already made. 
-                    Rejoin your world of culinary inspiration with your treasure trove of tantalizing recipes. 
-                    Dive into a mouthwatering journey that promises to satisfy every craving and ignite your passion for cooking.
-                    Click below to see what you have cooking!
-                </p>
-                <a class="link" href="/userRecipes">Cooking Time!</a>
-            </div>
-            
-            <div class="grid_display">
-                <img class="grid_img" src="images/katsudon.jpg">
-            </div>
-        </div>
-    </div>
-    
 
-    <footer>
 
-    </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <footer>
 
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 20,
-            autoWidth: true,
-            dots: true,
-            dotsEach: 1,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-        })
-    </script>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                autoWidth: true,
+                dots: true,
+                dotsEach: 1,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+            })
+        </script>
 </body>
+
 </html>
