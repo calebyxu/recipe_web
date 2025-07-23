@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    res.redirect("home", { name: "hello"});
+    res.redirect(200, "home", { name: "hello"});
 });
 
 router.put("/", (req, res) => {
