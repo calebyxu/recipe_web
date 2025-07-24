@@ -65,6 +65,7 @@ footer {
 #hero_text_wrapper {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: white;
     background: rgba(255, 255, 255, 0.85);
