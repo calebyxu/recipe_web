@@ -72,6 +72,10 @@ footer {
     width: 450px;
 }
 
+#hero_text_wrapper h1 {
+    margin: 0;
+}
+
 /* Owl Carousel */
 .item {
     width: 200px;
