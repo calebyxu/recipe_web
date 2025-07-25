@@ -4,7 +4,7 @@ const path = require("path");
 
 //Init
 const app = express();
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000 || 80;
 
 //Error catching
 app.listen(PORT, (error) =>{
