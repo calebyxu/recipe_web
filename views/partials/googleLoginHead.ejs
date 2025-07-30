@@ -23,13 +23,13 @@
 
         const responsePayload = decodeJWT(response.credential);
 
-        // console.log("Decoded JWT ID token fields:");
-        // console.log("  Full Name: " + responsePayload.name);
-        // console.log("  Given Name: " + responsePayload.given_name);
-        // console.log("  Family Name: " + responsePayload.family_name);
-        // console.log("  Unique ID: " + responsePayload.sub);
-        // console.log("  Profile image URL: " + responsePayload.picture);
-        // console.log("  Email: " + responsePayload.email);
+        console.log("Decoded JWT ID token fields:");
+        console.log("  Full Name: " + responsePayload.name);
+        console.log("  Given Name: " + responsePayload.given_name);
+        console.log("  Family Name: " + responsePayload.family_name);
+        console.log("  Unique ID: " + responsePayload.sub);
+        console.log("  Profile image URL: " + responsePayload.picture);
+        console.log("  Email: " + responsePayload.email);
 
         /*fetch api doesn't work with current app since it doesn't reload page*/
         // try {
@@ -46,17 +46,17 @@
         //     console.error(e);
         // }
         
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = 'https://umai-site-fc33abfe2d2d.herokuapp.com/home';
+        // const form = document.createElement('form');
+        // form.method = 'POST';
+        // form.action = 'https://umai-site-fc33abfe2d2d.herokuapp.com/home';
 
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'name';
-        input.value = responsePayload['name'];
-        form.appendChild(input);
+        // const input = document.createElement('input');
+        // input.type = 'hidden';
+        // input.name = 'name';
+        // input.value = responsePayload['name'];
+        // form.appendChild(input);
 
-        document.body.appendChild(form);
-        form.submit();
+        // document.body.appendChild(form);
+        // form.submit();
     }
 </script>
